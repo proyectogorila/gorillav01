@@ -1,0 +1,33 @@
+.c-barraDeEstadoSuperior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $PG-01-color;
+    height: 3rem;
+    padding: 0 2.5rem;
+    align-items: center;
+
+   
+    &__contenedor{
+        padding: 0;
+        height: 2.4rem;
+    }
+
+    &__itemIzquierda{
+        width: 2rem;
+        height: 2rem;
+  
+    }
+
+    &__itemCentral{
+        @include font-14-400-225($PG-07-color);
+
+        
+    }
+
+    &__itemDerecha{
+        @include font-14-400-225($PG-07-color);
+        
+    }
+
+}

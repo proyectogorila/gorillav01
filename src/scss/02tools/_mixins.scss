@@ -1,0 +1,163 @@
+/*=======================================================*/
+/*  MEDIA MIXIN  */
+/*======================================================= */
+
+@mixin xs() {
+    @media(min-width: 1px) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media(min-width: 501px) {
+        @content;
+    }
+}
+
+@mixin sd() {
+    @media(min-width: 1101px) {
+        @content;
+    }
+}
+
+/* RANGE */
+
+@mixin only-xs() {
+    @media (min-width: 0px) and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin only-sm() {
+    @media (min-width: 501px) and (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin only-md() {
+    @media (min-width: 1101px) {
+        @content;
+    }
+}
+
+
+/*=======================================================*/
+/*  MIX MIXIN  */
+/*======================================================= */
+
+/* TIPOGRAFIA */
+
+/* se usa:
+tipografia en barraDeEstadoSuperior item centra, item derecho
+*/
+@mixin font-14-400-225($color) {
+    color: $color;
+    font-size: $PG-fs14;
+    font-weight: 400;
+    line-height: 2.25rem;
+   
+}
+
+@mixin font-16-600-225($color) {
+    color: $color;
+    font-size: $PG-fs16;
+    font-weight: 600;
+    line-height: 2.25rem;
+   
+}
+@mixin font-16-400-225($color) {
+    color: $color;
+    font-size: $PG-fs16;
+    font-weight: 400;
+    line-height: 2.25rem;
+   
+}
+
+@mixin titulo{
+    font-size: $PG-fs16;
+    font-weight: 600;
+
+}
+
+@mixin titulo{
+    font-size: $PG-fs16;
+    font-weight: 600;
+
+}
+
+@mixin tituloOpciones{
+    font-size: $PG-fs12;
+    font-weight: 500;
+
+}
+
+
+
+@mixin tituloGrupoDeOpciones{
+    font-size: $PG-fs13;
+    font-weight: 400;
+
+}
+
+
+
+
+
+
+@mixin font-16-300-225($color) {
+    color: $color;
+    font-size: $PG-fs16;
+    font-weight: 300;
+    line-height: 2.25rem;
+}
+@mixin font-14-300-225($color) {
+    color: $color;
+    font-size: $PG-fs14;
+    font-weight: 300;
+    line-height: 2.25rem;
+}
+
+
+
+//borders
+
+@mixin border($grosor, $color, $radius, ) {
+
+    border: $grosor solid $color;
+    border-radius: $radius;
+}
+
+@mixin linea-difuminada() {
+    border-bottom: 2px solid $Ys-border-color;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+}
+
+
+
+//MAGN
+
+@mixin margin1() {
+    margin: 3rem auto 3rem 3.9rem;
+}
+
+@mixin margin2() {
+    margin: 0.6rem auto 2rem 3.9rem;
+}
+
+//Buttom spam
+
+@mixin buttom-spam($color) {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color;
+    border: 1px solid #ACD9B2;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.0001);
+    border-radius: 10px;
+    height: 5.9rem;
+    cursor: pointer;
+    width: 100%;
+
+}
